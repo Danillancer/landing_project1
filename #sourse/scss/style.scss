@@ -264,7 +264,7 @@
 .container {
    max-width: 1100px;
    margin: 0 auto;
-   padding: 0 15px;
+   padding: 0;
 }
 .title {
    color: #353738;
@@ -401,12 +401,14 @@
 .shop {
    &_btn {
       color: #ffffff;
-      font-size: 14px;
+      font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1600 - 320)));
       font-weight: 700;
+
       text-transform: uppercase;
-      letter-spacing: 2.8px;
+      letter-spacing: calc(1px + (2.8 - 1) * ((100vw - 320px) / (1600 - 320)));
       border: 1px solid rgba(255, 255, 255, 0.5);
-      padding: 20px 55px;
+      padding: calc(5px + (20 - 5) * ((100vw - 320px) / (1600 - 320)))
+         calc(5px + (55 - 5) * ((100vw - 320px) / (1600 - 320)));
    }
 
    &__body {
@@ -417,6 +419,9 @@
       flex: 0 1 16.666%;
       &_b {
          flex: 0 1 33.333%;
+      }
+      @media (max-width: 767px) {
+         display: none;
       }
    }
 
@@ -457,7 +462,7 @@
    &__text {
       margin: 35px 0;
       color: #848789;
-      font-size: 24px;
+      font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1600 - 320)));
       font-style: italic;
       line-height: 34px;
    }
