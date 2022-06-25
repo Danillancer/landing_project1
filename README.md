@@ -1,1 +1,1 @@
-https://danillancer.github.io/Pet_project1/
+https://danillancer.github.io/landing_project1/
